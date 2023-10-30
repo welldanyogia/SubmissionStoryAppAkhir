@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Submission Story App</string>
+    <string name="title_login_page">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Sign In</string>
+    <string name="logout">Log Out</string>
+    <string name="register">Sign Up</string>
+    <string name="login_or_register">Login Or Register</string>
+    <string name="tittle_sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="title">Title</string>
+    <string name="desc_tv">Description</string>
+    <string name="logo">logo</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
+    <string name="empty_image_warning">Gagal</string>
+    <string name="description">Description</string>
+    <string name="retry">Coba lagi</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+    <string name="add_story">Add Story</string>
+    <string name="maps">maps</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="with_location">With Location</string>
+</resources>
