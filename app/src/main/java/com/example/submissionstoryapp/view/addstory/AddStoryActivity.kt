@@ -99,7 +99,10 @@ class AddStoryActivity : AppCompatActivity() {
         currentImageUri?.let { uri ->
             val imageFile = uriToFile(uri, this).reduceFileImage()
             val description = binding.editTextText.text.toString()
-
+            if (description.isEmpty()) {
+                showToast("Description cannot be empty")
+                return
+            }
             showLoading(true)
 
             val requestBody = description.toRequestBody("text/plain".toMediaType())
@@ -144,6 +147,10 @@ class AddStoryActivity : AppCompatActivity() {
         currentImageUri?.let { uri ->
             val imageFile = uriToFile(uri, this).reduceFileImage()
             val description = binding.editTextText.text.toString()
+            if (description.isEmpty()) {
+                showToast("Description cannot be empty")
+                return
+            }
 
             showLoading(true)
 

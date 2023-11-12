@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.example.submissionstoryapp.data.repo.UserRepository
 import com.example.submissionstoryapp.data.pref.UserModel
 import com.example.submissionstoryapp.data.repo.StoryRepository
@@ -13,7 +14,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(private val repository: UserRepository,private val storyRepository: StoryRepository) : ViewModel() {
     val story: LiveData<PagingData<ListStoryItem>> =
-        storyRepository.getStoryPaging()
+        storyRepository.getStoryPaging().cachedIn(viewModelScope)
     fun getSession(): LiveData<UserModel> {
         return repository.getSession().asLiveData()
     }
